@@ -1,5 +1,5 @@
 import br.com.unialfa.ia.core.heuristic.SolucaoCtx;
-import br.com.unialfa.ia.core.heuristic.impl.Djikstra;
+import br.com.unialfa.ia.core.heuristic.impl.BuscaEmProfundidade;
 import br.com.unialfa.ia.core.model.Grafo;
 import br.com.unialfa.ia.core.model.Vertice;
 
@@ -13,7 +13,7 @@ public class Teste {
 		Vertice edeia = new Vertice("Edeia");
 		Vertice hidrolandia = new Vertice("Hidrolandia");
 		Vertice silvania = new Vertice("Silvania");
-		Vertice vianapolis = new Vertice("Orizona");
+		Vertice vianapolis = new Vertice("Vianapolis");
 		Vertice ipameri = new Vertice("Ipameri");
 		Vertice pontalina = new Vertice("Pontalina");
 		Vertice piracanjuba = new Vertice("Piracanjuba");
@@ -65,7 +65,7 @@ public class Teste {
 		grafo.listarVertices();
 
 		
-		SolucaoCtx.buscaCega = new Djikstra();
+		SolucaoCtx.buscaCega = new BuscaEmProfundidade();
 		
 		Grafo solucao = SolucaoCtx.processarGrafo(grafo, goiania);
 		
